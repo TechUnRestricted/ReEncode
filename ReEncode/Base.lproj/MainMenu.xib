@@ -746,8 +746,69 @@
                                             <menu key="menu" id="m4g-dz-UDC">
                                                 <items>
                                                     <menuItem title="UTF-8" state="on" id="XWC-gg-4d6"/>
+                                                    <menuItem title="UTF-16" id="DAT-Pp-F5f">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32" id="vd8-Y6-7e1">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Windows CP1250" id="qc0-d2-wI4">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
                                                     <menuItem title="Windows CP1251" id="ekz-l6-fuM"/>
+                                                    <menuItem title="Windows CP1252" id="FUC-5Q-9zQ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
                                                     <menuItem title="Windows CP1253" id="YsV-FR-bic"/>
+                                                    <menuItem title="Windows CP1254" id="ezL-ql-bpr">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-2022JP" id="Iat-UU-6UD">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-Latin 1" id="GAW-ah-e8W">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-Latin 2" id="WUi-hh-WII">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Japanese EUC" id="dkw-By-Ne9">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="2RY-Ob-Lpf"/>
+                                                    <menuItem title="ASCII" id="2eo-Qa-baG">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ASCII (Non-Lossy)" id="JDF-TT-syb">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="macOS Roman" id="ie2-0B-g9x">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="NextStep" id="FUO-jx-bw5">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ShiftJIS" id="NLb-Nq-VHm">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Symbol" id="60d-tM-77q">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Unicode" id="epE-LO-dYg">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-16 Big Endian" id="BfE-Ro-Pdt">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-16 Little Endian" id="ZAR-Xm-Y06">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32 Big Endian" id="7ub-nq-8xK">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32 Little Endian" id="Fza-yp-i4m">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>
@@ -755,14 +816,75 @@
                                     <popUpButton wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyX-TV-O3h">
                                         <rect key="frame" x="17" y="131" width="447" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <popUpButtonCell key="cell" type="roundTextured" title="UTF-8" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="4yY-e3-lKH" id="ty8-2j-EOS">
+                                        <popUpButtonCell key="cell" type="roundTextured" title="Windows CP1251" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="ead-nT-l3Y" id="ty8-2j-EOS">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="menu"/>
                                             <menu key="menu" id="MoO-kq-dDR">
                                                 <items>
-                                                    <menuItem title="UTF-8" state="on" id="4yY-e3-lKH"/>
-                                                    <menuItem title="Windows CP1251" id="K1h-dB-ZwP"/>
-                                                    <menuItem title="Windows CP1253" id="sfn-kI-Gs3"/>
+                                                    <menuItem title="UTF-8" id="56I-Wh-wet"/>
+                                                    <menuItem title="UTF-16" id="tyf-xR-43n">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32" state="on" id="TAF-gw-eVL">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Windows CP1250" id="eMe-1R-a2T">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Windows CP1251" state="on" id="ead-nT-l3Y"/>
+                                                    <menuItem title="Windows CP1252" id="xQN-Cp-JTb">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Windows CP1253" id="5LP-Ej-loA"/>
+                                                    <menuItem title="Windows CP1254" id="fvL-Hu-iwZ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-2022JP" id="LAR-0a-wTC">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-Latin 1" id="Kjm-eA-nMn">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ISO-Latin 2" id="RwV-Ow-UO0">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Japanese EUC" id="FCp-yD-Q03">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem isSeparatorItem="YES" id="Vr9-Eo-Wf3"/>
+                                                    <menuItem title="ASCII" id="ZUo-t2-rDT">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ASCII (Non-Lossy)" id="P7f-ZZ-hRJ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="macOS Roman" id="TPY-9K-AXM">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="NextStep" id="4b7-4s-Hpu">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="ShiftJIS" id="9F2-LF-MyJ">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Symbol" id="qH7-pE-nhD">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="Unicode" id="xRL-ff-gV8">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-16 Big Endian" id="ZJk-Zo-elL">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-16 Little Endian" id="f12-1t-An1">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32 Big Endian" id="dQ6-nl-BWL">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
+                                                    <menuItem title="UTF-32 Little Endian" id="K0u-xw-29K">
+                                                        <modifierMask key="keyEquivalentModifierMask"/>
+                                                    </menuItem>
                                                 </items>
                                             </menu>
                                         </popUpButtonCell>

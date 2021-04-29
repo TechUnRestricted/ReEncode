@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ReEncode
 //
-//  Created  on 27.04.2021.
+//  Created on 27.04.2021.
 //
 
 import Cocoa
@@ -43,10 +43,51 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         case 0:
             return String.Encoding.utf8
         case 1:
-            return String.Encoding.windowsCP1251
+            return String.Encoding.utf16
         case 2:
+            return String.Encoding.utf32
+        case 3:
+            return String.Encoding.windowsCP1250
+        case 4:
+            return String.Encoding.windowsCP1251
+        case 5:
+            return String.Encoding.windowsCP1252
+        case 6:
             return String.Encoding.windowsCP1253
+        case 7:
+            return String.Encoding.windowsCP1254
+        case 8:
+            return String.Encoding.iso2022JP
+        case 9:
+            return String.Encoding.isoLatin1
+        case 10:
+            return String.Encoding.isoLatin2
+        case 11:
+            return String.Encoding.japaneseEUC
+        case 13:
+            return String.Encoding.ascii
+        case 14:
+            return String.Encoding.nonLossyASCII
+        case 15:
+            return String.Encoding.macOSRoman
+        case 16:
+            return String.Encoding.nextstep
+        case 17:
+            return String.Encoding.shiftJIS
+        case 18:
+            return String.Encoding.symbol
+        case 19:
+            return String.Encoding.unicode
+        case 20:
+            return String.Encoding.utf16BigEndian
+        case 21:
+            return String.Encoding.utf16LittleEndian
+        case 22:
+            return String.Encoding.utf32BigEndian
+        case 23:
+            return String.Encoding.utf32LittleEndian
         default:
+ 
             return nil
         }
         }
@@ -91,19 +132,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     picker.canChooseFiles          = true
                     picker.allowedFileTypes        = ["txt"]
                     picker.runModal()
-                   /* if (filePicker.runModal() ==  NSApplication.ModalResponse.OK) {
-                        let result = filePicker.url
-                        
-                        if (result != nil) {
-                            
-                        }
-                        
-                    } else {
-                        // User clicked on "Close" button.
-                        return
-                    }
- */
-        
+    
         return picker.url
     }
     
@@ -114,7 +143,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             picker.showsHiddenFiles         = false
             picker.canCreateDirectories     = true
             picker.allowedFileTypes        = ["txt"]
-
             picker.runModal()
 
         return picker.url
@@ -158,7 +186,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         window?.isMovableByWindowBackground = true
-
    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
