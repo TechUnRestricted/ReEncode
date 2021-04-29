@@ -19,7 +19,7 @@
                 <outlet property="popUpOutputEncoding" destination="wyX-TV-O3h" id="hxP-ht-6TA"/>
                 <outlet property="textFieldInputPath" destination="lI0-7q-iqW" id="VXz-mO-yaQ"/>
                 <outlet property="textFieldOutputPath" destination="60g-bF-SPi" id="vGE-eR-3cE"/>
-                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="P0A-C6-7YH"/>
             </connections>
         </customObject>
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
@@ -737,14 +737,14 @@
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KDs-II-u2b">
                         <rect key="frame" x="18" y="271" width="446" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" id="2AS-ZQ-6PM">
+                        <popUpButtonCell key="cell" type="roundTextured" title="UTF-8" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" selectedItem="XWC-gg-4d6" id="2AS-ZQ-6PM">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="m4g-dz-UDC">
                                 <items>
                                     <menuItem title="UTF-8" id="XWC-gg-4d6"/>
-                                    <menuItem title="Windows CP1253" id="YsV-FR-bic"/>
                                     <menuItem title="Windows CP1251" id="ekz-l6-fuM"/>
+                                    <menuItem title="Windows CP1253" id="YsV-FR-bic"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -752,14 +752,14 @@
                     <popUpButton verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyX-TV-O3h">
                         <rect key="frame" x="17" y="159" width="447" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <popUpButtonCell key="cell" type="roundTextured" title="Windows CP1253" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" inset="2" selectedItem="sfn-kI-Gs3" id="ty8-2j-EOS">
+                        <popUpButtonCell key="cell" type="roundTextured" title="UTF-8" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" borderStyle="border" inset="2" selectedItem="4yY-e3-lKH" id="ty8-2j-EOS">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="menu"/>
                             <menu key="menu" id="MoO-kq-dDR">
                                 <items>
-                                    <menuItem title="Windows CP1253" state="on" id="sfn-kI-Gs3"/>
                                     <menuItem title="UTF-8" id="4yY-e3-lKH"/>
                                     <menuItem title="Windows CP1251" id="K1h-dB-ZwP"/>
+                                    <menuItem title="Windows CP1253" state="on" id="sfn-kI-Gs3"/>
                                 </items>
                             </menu>
                         </popUpButtonCell>
@@ -774,6 +774,14 @@
                         <connections>
                             <action selector="buttonStartConversion:" target="Voe-Tx-rLC" id="hud-yH-8S2"/>
                         </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tgl-aC-h32">
+                        <rect key="frame" x="18" y="120" width="442" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Process file in RAM" bezelStyle="regularSquare" imagePosition="left" alignment="left" enabled="NO" state="on" inset="2" id="OSv-Kf-y9M">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
                     </button>
                 </subviews>
             </view>

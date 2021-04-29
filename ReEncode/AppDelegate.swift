@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ReEncode
 //
-//  Created by WinterBoard on 27.04.2021.
+//  Created on 27.04.2021.
 //
 
 import Cocoa
@@ -26,41 +26,58 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var popUpOutputEncoding: NSPopUpButton!
     @IBOutlet weak var buttonFileChooser: NSButton!
     
+    @IBOutlet weak var window: NSWindow!
+    func showAlert(messageText : String, informativeText : String = "") {
+        let alert = NSAlert.init()
+        alert.messageText = messageText
+        alert.informativeText = informativeText
+        alert.addButton(withTitle: "Close")
+        alert.beginSheetModal(for: window)
+
+        
+    }
     
     func convertFileRam(inputpath : URL, inputEncoding : Int, outputpath : URL, outputEncoding : Int){
-        func inputEncodeType() -> String.Encoding?{
-        switch inputEncoding {
+        func encodeType(_ id : UInt8) -> String.Encoding?{
+        switch (id == 0 ? inputEncoding : outputEncoding) {
         case 0:
             return String.Encoding.utf8
         case 1:
-            return String.Encoding.windowsCP1253
-        case 2:
             return String.Encoding.windowsCP1251
+        case 2:
+            return String.Encoding.windowsCP1253
         default:
             return nil
         }
         }
-        func outputEncodeType() -> String.Encoding?{
-        switch outputEncoding {
-        case 0:
-            return String.Encoding.windowsCP1253
-        case 1:
-            return String.Encoding.utf8
-        case 2:
-            return String.Encoding.windowsCP1251
-        default:
-            return nil
-        }
-        }
+        
         do {
-            let original = try String(contentsOf: inputpath, encoding: inputEncodeType()!)
-            try original.write(to: outputpath, atomically: true, encoding: outputEncodeType()!)
+            let original = try String(contentsOf: inputpath, encoding: encodeType(0)!)
+            try original.write(to: outputpath, atomically: true, encoding: encodeType(1)!)
             print(original)
-            print("Converted from: \(inputEncodeType()) to \(outputEncodeType()) [Input: \(inputpath)] [Output: \(outputpath))")
+            print("Converted from: \(encodeType(0)) to \(encodeType(1)) [Input: \(inputpath)] [Output: \(outputpath))")
         }
-        catch {
-           print(error)
+       
+        catch let error as NSError{
+            switch error.code {
+            case 4:
+                showAlert(messageText: error.localizedDescription, informativeText: "Try to select the folder again. Perhaps, it was moved / deleted / renamed.")
+            case 260:
+                showAlert(messageText: error.localizedDescription, informativeText: "Try to select the file again. Perhaps, it was moved / deleted / renamed.")
+            case 261:
+                showAlert(messageText: error.localizedDescription, informativeText: "Change the Encoding Settings.")
+
+            case 642:
+                showAlert(messageText: error.localizedDescription, informativeText: "Change the Output Directory.")
+            default:
+                showAlert(messageText: error.localizedDescription, informativeText: "Warning: This error is unknown.\nPlease report it to the developer.\n[ERR:CODE] > \(error.code)")
+
+                break
+            }
+            print("[ERROR: Encoding] \(error)")
         }
+       
+
         
 
     }
@@ -96,7 +113,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             picker.title                    = "Choose a destination"
             picker.showsHiddenFiles         = false
             picker.canCreateDirectories     = true
-        picker.allowedFileTypes        = ["txt"]
+            picker.allowedFileTypes        = ["txt"]
 
             picker.runModal()
 
@@ -114,10 +131,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         }
         switch errorLookup {
         case 1:
+            showAlert(messageText: "The Input File was not selected.", informativeText: "Press the «Choose» button and select the Original File.")
             print("No Data in Input TextEdit")
         case 2:
+            showAlert(messageText: "The Output Directory was not selected.", informativeText: "Press the «Choose» button and change the Output Directory.")
             print("No Data in Output TextEdit")
         case 3:
+            showAlert(messageText: "Nothing is chosen.", informativeText: "Press the «Choose» buttons and select the Original File and the Output Directory.")
             print("No Data in all TextFields")
         default:
             print("Everything is fine")
@@ -137,21 +157,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-      print(URL(fileURLWithPath: "/Users/winterboard/Desktop/realcorussian.txt"))
-    }
+   }
 
     func applicationWillTerminate(_ aNotification: Notification) {
-        //  let str = String(UTF8String: strToDecode.cStringUsingEncoding(NSUTF8StringEncoding))
-          
-         // let myStringText = try! String(contentsOfFile: "/Applications/russian.txt", encoding: String.Encoding.windowsCP1251)
-          
-          
-         // let fileUrl = URL(fileURLWithPath: "/Users/winterboard/Desktop/realcorussian.txt")
-
-          
-           
-          
-         // print(myStringText)
+       
     }
 
 
