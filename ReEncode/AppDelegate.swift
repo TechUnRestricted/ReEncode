@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  ReEncode
 //
-//  Created on 27.04.2021.
+//  Created  on 27.04.2021.
 //
 
 import Cocoa
@@ -64,7 +64,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                 showAlert(messageText: error.localizedDescription, informativeText: "Try to select the folder again. Perhaps, it was moved / deleted / renamed.")
             case 260:
                 showAlert(messageText: error.localizedDescription, informativeText: "Try to select the file again. Perhaps, it was moved / deleted / renamed.")
-            case 261:
+            case 261, 517:
                 showAlert(messageText: error.localizedDescription, informativeText: "Change the Encoding Settings.")
 
             case 642:
@@ -157,6 +157,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        window?.isMovableByWindowBackground = true
+
    }
 
     func applicationWillTerminate(_ aNotification: Notification) {
