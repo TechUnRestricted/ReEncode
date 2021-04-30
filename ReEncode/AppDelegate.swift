@@ -20,7 +20,7 @@ extension Bundle {
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-   
+    
     
     @IBAction func buttonFileChooserOnClick(_ sender: Any) {
         let inputPath = getFromPicker()
@@ -34,7 +34,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     @IBAction func itemAboutOnClick(_ sender: Any) {
-        showAlert(messageText: "ReEncode v\(Bundle.main.releaseVersionNumber)", informativeText: "This application is distributed for free use.\nReEncode uses container mode (sandboxing), so some functionality such as manual path entry is not available.\nThe author of the application is not responsible for anything.\nIf you find bugs - feel free to report me.\n\nSource Code: github.com/TechUnRestricted/ReEncode")
+        showAlert(messageText: "ReEncode v\(Bundle.main.releaseVersionNumber)", informativeText:
+                    """
+                    This application is distributed for free use.
+                    ReEncode runs in container mode (i.e. sandboxed), so some functionality such as manual path entry is not available.
+
+                    The author of the application is not responsible for anything.
+
+                    If you find bugs - feel free to report me.
+
+                    Source Code: github.com/TechUnRestricted/ReEncode
+                    """)
     }
     
     @IBOutlet weak var textFieldOutputPath: NSTextField!
@@ -44,7 +54,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var popUpInputEncoding: NSPopUpButton!
     @IBOutlet weak var popUpOutputEncoding: NSPopUpButton!
     @IBOutlet weak var buttonFileChooser: NSButton!
-  
+    
     var workItem : DispatchWorkItem!
     
     @IBOutlet weak var window: NSWindow!
@@ -163,9 +173,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         picker.canChooseDirectories    = false
         picker.canChooseFiles          = true
         picker.allowedFileTypes        = ["txt"]
-        picker.runModal()
-        
-        return picker.url
+        return (picker.runModal() == .OK ? picker.url : URL(fileURLWithPath:textFieldInputPath.stringValue))
     }
     
     func saveFromPicker() -> URL?{
@@ -175,9 +183,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         picker.showsHiddenFiles         = false
         picker.canCreateDirectories     = true
         picker.allowedFileTypes        = ["txt"]
-        picker.runModal()
-        
-        return picker.url
+        return (picker.runModal() == .OK ? picker.url : URL(fileURLWithPath:textFieldOutputPath.stringValue))
         
     }
     
@@ -224,7 +230,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
     }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
-         return true
+        return true
     }
     
     
