@@ -7,22 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D6C1E81326383A3000BB6937 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1E81226383A3000BB6937 /* AppDelegate.swift */; };
-		D6C1E81526383A3100BB6937 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6C1E81426383A3100BB6937 /* Assets.xcassets */; };
-		D6C1E81826383A3100BB6937 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6C1E81626383A3100BB6937 /* MainMenu.xib */; };
+		D69FDDE9263ECC55007E91CC /* ReEncodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */; };
+		D69FDDEB263ECC55007E91CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69FDDEA263ECC55007E91CC /* ContentView.swift */; };
+		D69FDDED263ECC57007E91CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69FDDEC263ECC57007E91CC /* Assets.xcassets */; };
+		D69FDDF0263ECC57007E91CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D6C1E80F26383A3000BB6937 /* ReEncode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEncode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D6C1E81226383A3000BB6937 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D6C1E81426383A3100BB6937 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D6C1E81726383A3100BB6937 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
-		D6C1E81926383A3100BB6937 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6C1E81A26383A3100BB6937 /* ReEncode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncode.entitlements; sourceTree = "<group>"; };
+		D69FDDE5263ECC55007E91CC /* ReEncode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEncode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEncodeApp.swift; sourceTree = "<group>"; };
+		D69FDDEA263ECC55007E91CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D69FDDEC263ECC57007E91CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D69FDDF1263ECC57007E91CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D69FDDF2263ECC57007E91CC /* ReEncode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncode.entitlements; sourceTree = "<group>"; };
+		D69FDDF9263EE12A007E91CC /* ReEncodeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncodeDebug.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D6C1E80C26383A3000BB6937 /* Frameworks */ = {
+		D69FDDE2263ECC55007E91CC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -32,69 +35,81 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D6C1E80626383A3000BB6937 = {
+		D69FDDDC263ECC55007E91CC = {
 			isa = PBXGroup;
 			children = (
-				D6C1E81126383A3000BB6937 /* ReEncode */,
-				D6C1E81026383A3000BB6937 /* Products */,
+				D69FDDE7263ECC55007E91CC /* ReEncode */,
+				D69FDDE6263ECC55007E91CC /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D6C1E81026383A3000BB6937 /* Products */ = {
+		D69FDDE6263ECC55007E91CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D6C1E80F26383A3000BB6937 /* ReEncode.app */,
+				D69FDDE5263ECC55007E91CC /* ReEncode.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D6C1E81126383A3000BB6937 /* ReEncode */ = {
+		D69FDDE7263ECC55007E91CC /* ReEncode */ = {
 			isa = PBXGroup;
 			children = (
-				D6C1E81226383A3000BB6937 /* AppDelegate.swift */,
-				D6C1E81426383A3100BB6937 /* Assets.xcassets */,
-				D6C1E81626383A3100BB6937 /* MainMenu.xib */,
-				D6C1E81926383A3100BB6937 /* Info.plist */,
-				D6C1E81A26383A3100BB6937 /* ReEncode.entitlements */,
+				D69FDDF9263EE12A007E91CC /* ReEncodeDebug.entitlements */,
+				D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */,
+				D69FDDEA263ECC55007E91CC /* ContentView.swift */,
+				D69FDDEC263ECC57007E91CC /* Assets.xcassets */,
+				D69FDDF1263ECC57007E91CC /* Info.plist */,
+				D69FDDF2263ECC57007E91CC /* ReEncode.entitlements */,
+				D69FDDEE263ECC57007E91CC /* Preview Content */,
 			);
 			path = ReEncode;
+			sourceTree = "<group>";
+		};
+		D69FDDEE263ECC57007E91CC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D6C1E80E26383A3000BB6937 /* ReEncode */ = {
+		D69FDDE4263ECC55007E91CC /* ReEncode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D6C1E81D26383A3100BB6937 /* Build configuration list for PBXNativeTarget "ReEncode" */;
+			buildConfigurationList = D69FDDF5263ECC57007E91CC /* Build configuration list for PBXNativeTarget "ReEncode" */;
 			buildPhases = (
-				D6C1E80B26383A3000BB6937 /* Sources */,
-				D6C1E80C26383A3000BB6937 /* Frameworks */,
-				D6C1E80D26383A3000BB6937 /* Resources */,
+				D69FDDE1263ECC55007E91CC /* Sources */,
+				D69FDDE2263ECC55007E91CC /* Frameworks */,
+				D69FDDE3263ECC55007E91CC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ReEncode;
+			packageProductDependencies = (
+			);
 			productName = ReEncode;
-			productReference = D6C1E80F26383A3000BB6937 /* ReEncode.app */;
+			productReference = D69FDDE5263ECC55007E91CC /* ReEncode.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D6C1E80726383A3000BB6937 /* Project object */ = {
+		D69FDDDD263ECC55007E91CC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					D6C1E80E26383A3000BB6937 = {
+					D69FDDE4263ECC55007E91CC = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = D6C1E80A26383A3000BB6937 /* Build configuration list for PBXProject "ReEncode" */;
+			buildConfigurationList = D69FDDE0263ECC55007E91CC /* Build configuration list for PBXProject "ReEncode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -102,52 +117,44 @@
 				en,
 				Base,
 			);
-			mainGroup = D6C1E80626383A3000BB6937;
-			productRefGroup = D6C1E81026383A3000BB6937 /* Products */;
+			mainGroup = D69FDDDC263ECC55007E91CC;
+			packageReferences = (
+			);
+			productRefGroup = D69FDDE6263ECC55007E91CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D6C1E80E26383A3000BB6937 /* ReEncode */,
+				D69FDDE4263ECC55007E91CC /* ReEncode */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D6C1E80D26383A3000BB6937 /* Resources */ = {
+		D69FDDE3263ECC55007E91CC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C1E81526383A3100BB6937 /* Assets.xcassets in Resources */,
-				D6C1E81826383A3100BB6937 /* MainMenu.xib in Resources */,
+				D69FDDF0263ECC57007E91CC /* Preview Assets.xcassets in Resources */,
+				D69FDDED263ECC57007E91CC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D6C1E80B26383A3000BB6937 /* Sources */ = {
+		D69FDDE1263ECC55007E91CC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6C1E81326383A3000BB6937 /* AppDelegate.swift in Sources */,
+				D69FDDEB263ECC55007E91CC /* ContentView.swift in Sources */,
+				D69FDDE9263ECC55007E91CC /* ReEncodeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		D6C1E81626383A3100BB6937 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D6C1E81726383A3100BB6937 /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
-		D6C1E81B26383A3100BB6937 /* Debug */ = {
+		D69FDDF3263ECC57007E91CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -198,7 +205,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -208,7 +215,7 @@
 			};
 			name = Debug;
 		};
-		D6C1E81C26383A3100BB6937 /* Release */ = {
+		D69FDDF4263ECC57007E91CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -262,40 +269,44 @@
 			};
 			name = Release;
 		};
-		D6C1E81E26383A3100BB6937 /* Debug */ = {
+		D69FDDF6263ECC57007E91CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ReEncode/ReEncode.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = ReEncode/ReEncodeDebug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ReEncode/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ReEncode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techunrestricted.ReEncode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		D6C1E81F26383A3100BB6937 /* Release */ = {
+		D69FDDF7263ECC57007E91CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReEncode/ReEncode.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"ReEncode/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = ReEncode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techunrestricted.ReEncode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -305,25 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D6C1E80A26383A3000BB6937 /* Build configuration list for PBXProject "ReEncode" */ = {
+		D69FDDE0263ECC55007E91CC /* Build configuration list for PBXProject "ReEncode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6C1E81B26383A3100BB6937 /* Debug */,
-				D6C1E81C26383A3100BB6937 /* Release */,
+				D69FDDF3263ECC57007E91CC /* Debug */,
+				D69FDDF4263ECC57007E91CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D6C1E81D26383A3100BB6937 /* Build configuration list for PBXNativeTarget "ReEncode" */ = {
+		D69FDDF5263ECC57007E91CC /* Build configuration list for PBXNativeTarget "ReEncode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D6C1E81E26383A3100BB6937 /* Debug */,
-				D6C1E81F26383A3100BB6937 /* Release */,
+				D69FDDF6263ECC57007E91CC /* Debug */,
+				D69FDDF7263ECC57007E91CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D6C1E80726383A3000BB6937 /* Project object */;
+	rootObject = D69FDDDD263ECC55007E91CC /* Project object */;
 }
