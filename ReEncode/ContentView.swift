@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+extension View {
+    @ViewBuilder func hidden(_ shouldHide: Bool) -> some View {
+        switch shouldHide {
+        case true: self.hidden()
+        case false: self
+        }
+    }
+}
+
 struct ContentView: View {
     
     @State var inputFilePath: String = ""
@@ -14,6 +23,9 @@ struct ContentView: View {
     @State var contentBlurRadius: CGFloat = 0
     @State var inputEncodingIndex: String.Encoding = String.Encoding.utf8
     @State var outputEncodingIndex: String.Encoding = String.Encoding.windowsCP1251
+    @State var loadScreenState: Bool = false
+    @State var mainScreenState: Bool = true
+    
     
     struct VisualEffectView: NSViewRepresentable {
         func makeNSView(context: Context) -> NSVisualEffectView {
@@ -66,33 +78,47 @@ struct ContentView: View {
     }
     
     func convertFileRam(){
-        contentBlurRadius = 100
+        showLoadScreen(true)
         DispatchQueue.global(qos: .background).async {
-        do {
-            let original = try String(contentsOf: URL(fileURLWithPath: inputFilePath), encoding: inputEncodingIndex)
-            try original.write(to: URL(fileURLWithPath: outputFilePath), atomically: true, encoding: outputEncodingIndex)
-        }
-        
-        catch let error as NSError{
-            DispatchQueue.main.async {
-                switch error.code {
-                case 4:
-                    showAlert(messageText: error.localizedDescription, informativeText: "Try to select the folder again. Perhaps, it was moved / deleted / renamed.")
-                case 260:
-                    showAlert(messageText: error.localizedDescription, informativeText: "Try to select the file again. Perhaps, it was moved / deleted / renamed.")
-                case 261, 517:
-                    showAlert(messageText: error.localizedDescription, informativeText: "Change the Encoding Settings.")
-                    
-                case 642:
-                    showAlert(messageText: error.localizedDescription, informativeText: "Change the Output Directory.")
-                default:
-                    showAlert(messageText: error.localizedDescription, informativeText: "Warning: This error is unknown.\nPlease report it to the developer.\n[ERR:CODE] > \(error.code)")
-                }
-                
+            do {
+                let original = try String(contentsOf: URL(fileURLWithPath: inputFilePath), encoding: inputEncodingIndex)
+                try original.write(to: URL(fileURLWithPath: outputFilePath), atomically: true, encoding: outputEncodingIndex)
             }
-            print("[ERROR: Encoding] \(error)")
+            
+            catch let error as NSError{
+                DispatchQueue.main.async {
+                    switch error.code {
+                    case 4:
+                        showAlert(messageText: error.localizedDescription, informativeText: "Try to select the folder again. Perhaps, it was moved / deleted / renamed.")
+                    case 260:
+                        showAlert(messageText: error.localizedDescription, informativeText: "Try to select the file again. Perhaps, it was moved / deleted / renamed.")
+                    case 261, 517:
+                        showAlert(messageText: error.localizedDescription, informativeText: "Change the Encoding Settings.")
+                        
+                    case 642:
+                        showAlert(messageText: error.localizedDescription, informativeText: "Change the Output Directory.")
+                    default:
+                        showAlert(messageText: error.localizedDescription, informativeText: "Warning: This error is unknown.\nPlease report it to the developer.\n[ERR:CODE] > \(error.code)")
+                    }
+                    
+                }
+                print("[ERROR: Encoding] \(error)")
+            }
+            showLoadScreen(false)
+            
         }
+    }
+    
+    func showLoadScreen(_ show : Bool){
+        if (show){
+            contentBlurRadius = 100
+            loadScreenState = true
+            mainScreenState = false
+        }
+        else{
             contentBlurRadius = 0
+            loadScreenState = false
+            mainScreenState = true
         }
     }
     
@@ -155,46 +181,57 @@ struct ContentView: View {
     }
     
     var body: some View {
-       
-        Group{
-            
-           
+        
+        ZStack {
             VStack{
-                HStack{
-                    TextField("Input File Path:", text: $inputFilePath).disabled(true)
-                    Button("Choose") {
-                        getFromPicker()
-                    }
-                }
-                Picker(selection: $inputEncodingIndex, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                    listEncodings()
-                }
-                .labelsHidden()
                 
-            }.padding()
-            
-            VStack{
-                HStack{
-                    TextField("Output File Path:", text: $outputFilePath).disabled(true)
-                    Button("Choose") {
-                        saveFromPicker()
+                
+                VStack{
+                    HStack{
+                        TextField("Input File Path:", text: $inputFilePath).disabled(true)
+                        Button("Choose") {
+                            getFromPicker()
+                        }
                     }
+                    Picker(selection: $inputEncodingIndex, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                        listEncodings()
+                    }
+                    .labelsHidden()
                     
-                }
-
-                Picker(selection: $outputEncodingIndex, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
-                    listEncodings()
-                }
-                .labelsHidden()
-                
-                Button("Start Conversion") {
-                    if (everythingIsFilled()){
-                        convertFileRam()
-                    }
                 }.padding()
                 
-            }.padding()
-        }.background(VisualEffectView()).blur(radius: contentBlurRadius)
+                VStack{
+                    HStack{
+                        TextField("Output File Path:", text: $outputFilePath).disabled(true)
+                        Button("Choose") {
+                            saveFromPicker()
+                        }
+                        
+                    }
+                    
+                    Picker(selection: $outputEncodingIndex, label: /*@START_MENU_TOKEN@*/Text("Picker")/*@END_MENU_TOKEN@*/) {
+                        listEncodings()
+                    }
+                    .labelsHidden()
+                    
+                    Button("Start Conversion") {
+                        if (everythingIsFilled()){
+                            convertFileRam()
+                        }
+                    }.padding()
+                    
+                }.padding()
+            }.background(VisualEffectView()).blur(radius: contentBlurRadius).disabled(!mainScreenState)
+            VStack{
+                Text("Please wait…")
+                    .font(.largeTitle)
+                    .fontWeight(.light)
+                Text("Conversion in Progress")
+                    .font(.title3)
+                    .fontWeight(.ultraLight)
+            }.hidden(!loadScreenState)
+        }
+        
         
     }
     
