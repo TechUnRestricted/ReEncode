@@ -184,7 +184,7 @@ struct ContentView: View {
         
         ZStack {
             VStack{
-                
+                Spacer()
                 
                 VStack{
                     HStack{
@@ -222,15 +222,25 @@ struct ContentView: View {
                     
                 }.padding()
             }.background(VisualEffectView()).blur(radius: contentBlurRadius).disabled(!mainScreenState)
+            
             VStack{
                 Text("Please wait…")
                     .font(.largeTitle)
                     .fontWeight(.light)
-                Text("Conversion in Progress")
-                    .font(.title3)
-                    .fontWeight(.ultraLight)
+                if #available(OSX 11.0, *) {
+                    Text("Conversion in Progress")
+                        .font(.title3)
+                        .fontWeight(.ultraLight)
+                } else {
+                    Text("Conversion in Progress")
+                        .font(.headline)
+                        .fontWeight(.ultraLight)
+                }
             }.hidden(!loadScreenState)
+            
         }
+        
+        .edgesIgnoringSafeArea([.top])
         
         
     }

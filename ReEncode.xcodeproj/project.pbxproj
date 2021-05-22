@@ -7,25 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D69FDDE9263ECC55007E91CC /* ReEncodeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */; };
-		D69FDDEB263ECC55007E91CC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69FDDEA263ECC55007E91CC /* ContentView.swift */; };
-		D69FDDED263ECC57007E91CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69FDDEC263ECC57007E91CC /* Assets.xcassets */; };
-		D69FDDF0263ECC57007E91CC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */; };
+		D6BFCD0D26580908000AA876 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFCD0C26580908000AA876 /* AppDelegate.swift */; };
+		D6BFCD0F26580908000AA876 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6BFCD0E26580908000AA876 /* ContentView.swift */; };
+		D6BFCD1126580909000AA876 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BFCD1026580909000AA876 /* Assets.xcassets */; };
+		D6BFCD1426580909000AA876 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6BFCD1326580909000AA876 /* Preview Assets.xcassets */; };
+		D6BFCD1726580909000AA876 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6BFCD1526580909000AA876 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D69FDDE5263ECC55007E91CC /* ReEncode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEncode.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReEncodeApp.swift; sourceTree = "<group>"; };
-		D69FDDEA263ECC55007E91CC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		D69FDDEC263ECC57007E91CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		D69FDDF1263ECC57007E91CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D69FDDF2263ECC57007E91CC /* ReEncode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncode.entitlements; sourceTree = "<group>"; };
-		D69FDDF9263EE12A007E91CC /* ReEncodeDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncodeDebug.entitlements; sourceTree = "<group>"; };
+		D6BFCD0926580908000AA876 /* ReEncode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReEncode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D6BFCD0C26580908000AA876 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D6BFCD0E26580908000AA876 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		D6BFCD1026580909000AA876 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D6BFCD1326580909000AA876 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		D6BFCD1626580909000AA876 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D6BFCD1826580909000AA876 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6BFCD1926580909000AA876 /* ReEncode.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReEncode.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D69FDDE2263ECC55007E91CC /* Frameworks */ = {
+		D6BFCD0626580908000AA876 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,40 +36,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D69FDDDC263ECC55007E91CC = {
+		D6BFCD0026580908000AA876 = {
 			isa = PBXGroup;
 			children = (
-				D69FDDE7263ECC55007E91CC /* ReEncode */,
-				D69FDDE6263ECC55007E91CC /* Products */,
+				D6BFCD0B26580908000AA876 /* ReEncode */,
+				D6BFCD0A26580908000AA876 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		D69FDDE6263ECC55007E91CC /* Products */ = {
+		D6BFCD0A26580908000AA876 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D69FDDE5263ECC55007E91CC /* ReEncode.app */,
+				D6BFCD0926580908000AA876 /* ReEncode.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D69FDDE7263ECC55007E91CC /* ReEncode */ = {
+		D6BFCD0B26580908000AA876 /* ReEncode */ = {
 			isa = PBXGroup;
 			children = (
-				D69FDDF9263EE12A007E91CC /* ReEncodeDebug.entitlements */,
-				D69FDDE8263ECC55007E91CC /* ReEncodeApp.swift */,
-				D69FDDEA263ECC55007E91CC /* ContentView.swift */,
-				D69FDDEC263ECC57007E91CC /* Assets.xcassets */,
-				D69FDDF1263ECC57007E91CC /* Info.plist */,
-				D69FDDF2263ECC57007E91CC /* ReEncode.entitlements */,
-				D69FDDEE263ECC57007E91CC /* Preview Content */,
+				D6BFCD0C26580908000AA876 /* AppDelegate.swift */,
+				D6BFCD0E26580908000AA876 /* ContentView.swift */,
+				D6BFCD1026580909000AA876 /* Assets.xcassets */,
+				D6BFCD1526580909000AA876 /* Main.storyboard */,
+				D6BFCD1826580909000AA876 /* Info.plist */,
+				D6BFCD1926580909000AA876 /* ReEncode.entitlements */,
+				D6BFCD1226580909000AA876 /* Preview Content */,
 			);
 			path = ReEncode;
 			sourceTree = "<group>";
 		};
-		D69FDDEE263ECC57007E91CC /* Preview Content */ = {
+		D6BFCD1226580909000AA876 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				D69FDDEF263ECC57007E91CC /* Preview Assets.xcassets */,
+				D6BFCD1326580909000AA876 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -76,40 +77,38 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D69FDDE4263ECC55007E91CC /* ReEncode */ = {
+		D6BFCD0826580908000AA876 /* ReEncode */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D69FDDF5263ECC57007E91CC /* Build configuration list for PBXNativeTarget "ReEncode" */;
+			buildConfigurationList = D6BFCD1C26580909000AA876 /* Build configuration list for PBXNativeTarget "ReEncode" */;
 			buildPhases = (
-				D69FDDE1263ECC55007E91CC /* Sources */,
-				D69FDDE2263ECC55007E91CC /* Frameworks */,
-				D69FDDE3263ECC55007E91CC /* Resources */,
+				D6BFCD0526580908000AA876 /* Sources */,
+				D6BFCD0626580908000AA876 /* Frameworks */,
+				D6BFCD0726580908000AA876 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = ReEncode;
-			packageProductDependencies = (
-			);
 			productName = ReEncode;
-			productReference = D69FDDE5263ECC55007E91CC /* ReEncode.app */;
+			productReference = D6BFCD0926580908000AA876 /* ReEncode.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D69FDDDD263ECC55007E91CC /* Project object */ = {
+		D6BFCD0126580908000AA876 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
-					D69FDDE4263ECC55007E91CC = {
+					D6BFCD0826580908000AA876 = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = D69FDDE0263ECC55007E91CC /* Build configuration list for PBXProject "ReEncode" */;
+			buildConfigurationList = D6BFCD0426580908000AA876 /* Build configuration list for PBXProject "ReEncode" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -117,44 +116,54 @@
 				en,
 				Base,
 			);
-			mainGroup = D69FDDDC263ECC55007E91CC;
-			packageReferences = (
-			);
-			productRefGroup = D69FDDE6263ECC55007E91CC /* Products */;
+			mainGroup = D6BFCD0026580908000AA876;
+			productRefGroup = D6BFCD0A26580908000AA876 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D69FDDE4263ECC55007E91CC /* ReEncode */,
+				D6BFCD0826580908000AA876 /* ReEncode */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D69FDDE3263ECC55007E91CC /* Resources */ = {
+		D6BFCD0726580908000AA876 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69FDDF0263ECC57007E91CC /* Preview Assets.xcassets in Resources */,
-				D69FDDED263ECC57007E91CC /* Assets.xcassets in Resources */,
+				D6BFCD1726580909000AA876 /* Main.storyboard in Resources */,
+				D6BFCD1426580909000AA876 /* Preview Assets.xcassets in Resources */,
+				D6BFCD1126580909000AA876 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D69FDDE1263ECC55007E91CC /* Sources */ = {
+		D6BFCD0526580908000AA876 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D69FDDEB263ECC55007E91CC /* ContentView.swift in Sources */,
-				D69FDDE9263ECC55007E91CC /* ReEncodeApp.swift in Sources */,
+				D6BFCD0F26580908000AA876 /* ContentView.swift in Sources */,
+				D6BFCD0D26580908000AA876 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		D6BFCD1526580909000AA876 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6BFCD1626580909000AA876 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		D69FDDF3263ECC57007E91CC /* Debug */ = {
+		D6BFCD1A26580909000AA876 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -215,7 +224,7 @@
 			};
 			name = Debug;
 		};
-		D69FDDF4263ECC57007E91CC /* Release */ = {
+		D6BFCD1B26580909000AA876 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -269,12 +278,12 @@
 			};
 			name = Release;
 		};
-		D69FDDF6263ECC57007E91CC /* Debug */ = {
+		D6BFCD1D26580909000AA876 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ReEncode/ReEncodeDebug.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ReEncode/Preview Content\"";
@@ -284,19 +293,20 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techunrestricted.ReEncode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		D69FDDF7263ECC57007E91CC /* Release */ = {
+		D6BFCD1E26580909000AA876 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ReEncode/ReEncode.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"ReEncode/Preview Content\"";
@@ -306,7 +316,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.techunrestricted.ReEncode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -316,25 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D69FDDE0263ECC55007E91CC /* Build configuration list for PBXProject "ReEncode" */ = {
+		D6BFCD0426580908000AA876 /* Build configuration list for PBXProject "ReEncode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D69FDDF3263ECC57007E91CC /* Debug */,
-				D69FDDF4263ECC57007E91CC /* Release */,
+				D6BFCD1A26580909000AA876 /* Debug */,
+				D6BFCD1B26580909000AA876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D69FDDF5263ECC57007E91CC /* Build configuration list for PBXNativeTarget "ReEncode" */ = {
+		D6BFCD1C26580909000AA876 /* Build configuration list for PBXNativeTarget "ReEncode" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D69FDDF6263ECC57007E91CC /* Debug */,
-				D69FDDF7263ECC57007E91CC /* Release */,
+				D6BFCD1D26580909000AA876 /* Debug */,
+				D6BFCD1E26580909000AA876 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D69FDDDD263ECC55007E91CC /* Project object */;
+	rootObject = D6BFCD0126580908000AA876 /* Project object */;
 }
